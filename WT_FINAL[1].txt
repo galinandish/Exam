@@ -1,0 +1,1502 @@
+//WT FINAL HTML CSS
+
+1)CONTACT FORM HTML and js
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first</title>
+    <link rel="stylesheet" href="lab1.css">
+</head>
+<body>
+        <form action="" method="POST">
+            <br><br>
+        <div>
+            <label>Name</label>
+            <input type="text" id="name" name="username">
+            <br><br>
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="radio" id="gender" name="user_gender">
+            <label for="">Male</label>
+            <input type="radio" id="gender" name="user_gender">
+            <label for="">Female</label>
+            <br><br>
+        </div>
+
+
+        <div>
+            <label>Email</label>
+            <input type="email" id="email" name="user_gender">
+            <br><br>
+        </div>
+
+        <div>
+            <label>Phone Number</label>
+            <input type="text" id="phone_no" name="user_phone number">
+            <br><br>
+        </div>
+
+        <div>
+            <label>Age</label>
+            <input type="Number" id="age" name="user's_age">
+            <br><br>
+        </div>
+
+        <div class="button">
+            <button type="submit" onclick="return validate()">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+        <br>
+
+       
+    <script>
+
+        function validate()
+        {
+        
+            var age = document.getElementById("age").value;
+            var name = document.getElementById("name").value;
+            var gender = document.getElementById("gender").value;
+            var email = document.getElementById("email").value;
+            var phone_no=document.getElementById("phone_no").value;
+
+            if(age=="")
+            {
+                alert("Age Must Be Entered");
+                return false;
+            }
+            else if(name=="")
+            {
+                alert("name Must Be Entered");
+                return false;
+            }
+            else if(gender=="")
+            {
+                alert("This Feild Must Be Entered");
+                return false;
+            }
+           
+            else if(email=="")
+            {
+                alert("Please Enter The Email");
+                return false;
+            }
+            else if(phone_no=="")
+            {
+                alert("Please Enter the phone Number");
+                return false;
+            }
+            else if(age<18 || age>60)
+                {
+                    alert('age Must Be BEtween 18 to 60');
+                    return false;
+                }
+            else
+                {
+                    alert('Login Successfull');
+                    return true;
+                
+                }
+        }
+    </script>
+</body>
+</html>
+
+
+
+CONTACT FORM css
+
+
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+    width: 470px;
+    border-radius: 5px;
+    margin-top: 150px;
+}
+
+.button{
+    margin-left: 100px;
+}
+
+label{
+    display:inline-block;
+    text-align: right;
+    width: 100px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+2)COMPONENT FORM HTML AND js
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="lab1b.css">
+    <title>order form</title>
+    <script type="text/javascript">
+        function validate(){   
+        let number = document.getElementById('p1').value;
+        let number1 = document.getElementById('p2').value;
+        let number2 = document.getElementById('p3').value;
+        var roundedNumber = ((number*1490)+(number1*250)+(number2*450));
+        document.getElementById('output1').value = roundedNumber;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h2> Component order form</h2>
+    <table border="1">
+        <tr>
+        <th>Product name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Mini UPS for wifi</td>
+            <td>1,490</td>
+            <td>
+                <div>
+                    <input type="text" id="p1">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>HDMI cable</td>
+            <td>250</td>
+            <td>
+            <div>
+                <input type="text" id="p2">
+            </div>
+        </td>
+        </tr>
+        <tr>
+            <td>Wireless mouse</td>
+            <td>450</td>
+            <td>
+            <div>
+                <input type="text" id="p3">
+                
+            </div>
+        </td>
+        </tr>
+    </table>
+    <BR></BR>
+    <div>
+        
+        <input type="button" value="Total cost order" onclick="validate()">
+        <input type="text" for="roundedNumber" name="finalAmount" id="output1">
+        <br>
+        
+    </div>
+    <BR></BR>
+    <div>
+        <input type="submit" value="Submit order">
+        <input type="reset" value="reset">
+    </div>
+    <br>
+    </center>
+</body>
+</html>
+
+
+
+COMPONENT FORM css
+
+
+table,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#D3D3D3;
+}
+.hey{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-left:150px;
+    margin-top: 50px;
+}
+
+ .cost{
+    margin-left: 70px;
+ }   
+
+ .button{
+    margin-left: 70px;
+    margin-bottom: 50px;
+ }
+
+ body{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 70px;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 50px;
+    background-color:white;
+}
+
+
+3)PASSWORD VERIFICATION HTML AND JS
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Verification</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function verifyPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+           
+            if (password == "") {
+                alert("Please enter a password.");
+                return false;
+            }        
+            if (password != confirmPassword) {
+                alert("Passwords do not match. You can reset!");             
+                return false;
+            }       
+            alert("Password verified!");
+            return true;
+        }
+     function showPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+<center>
+</head>
+<body>
+    <br><br><br><br>
+    <form onsubmit="return verifyPassword();" method="POST" action="data.php">
+        <h1>Password Verification</h1>
+        <div>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Enter password"><br><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="re-enter the password"><br>
+        <div>
+       <input type="checkbox" onclick="showPassword()">Show Password<br>
+        <br><br>
+        <input type="submit" value="Verify Password">
+        <br>
+        <input type="reset" value="Password reset">
+    </form>
+</body>
+
+
+</center>
+</html>
+
+
+PASSWORD VERIFICATION CSS
+
+
+html, body {
+    font-family: Product Sans;
+    width: 100%;
+    height:100%;
+}
+form {
+   
+    border: 2px solid #000000;
+    border-radius: 4%;
+    padding: 2%;
+    width: 25%;
+    height: auto;
+    background-color: #ffffff;
+}
+
+
+h1 {
+    font-family: Product Sans;
+    color: rgb(0, 0, 0);
+    background-color: black;
+    border-radius: 5%;
+    color: rgb(255, 255, 255);
+    width: 60%;
+}
+
+
+div{
+    font-family: Product Sans;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-color: #000000;
+    border: 2%;
+    border-radius: 2%;
+    color: rgb(235, 49, 49);
+    width: 70%;
+}
+
+
+label {
+    font-family: Product Sans;
+    color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px #ffffff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/* Center the login box */
+.login-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Style the input fields and labels */
+
+
+input[type="password"],
+input[type="confirmPassword"],
+input[type="text"]{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: 1.5px solid #5547d1;
+}
+
+
+/* Style the login button */
+input[type="submit"] {
+    display: block;
+    width: 61%;
+    padding: 10px;
+    background-color: #5547d1;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+input[type="reset"] {
+    display: block;
+    width: 61%;
+    padding: 10px;
+    border-radius: 31%;
+    background-color: #5547d1;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+input[type="reset"]:hover {
+    background-color: #e90c43;
+}
+
+
+/* Style the error message */
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+
+
+4)PHONE NUMBER HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Table</title>
+    <link rel="stylesheet" href="2a.css">
+</head>
+<body>
+        <table>
+            <tr style="background-color:lightskyblue;">
+                <th rowspan="2">Name</th>
+                <th colspan="2">Phone Number(s)</th>
+            </tr>
+            
+            <tr style="background-color:lightskyblue;">
+                <th>Primary</th>
+                <th>Secondary</th>
+            </tr>
+
+            <tr style="background-color:lightslategrey">
+                <td>Bill</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Janice</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr style="background-color:lightslategrey">
+                <td>Jamie</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Rahim</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr style="background-color:lightslategrey">
+                <td>Harriet</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Dia</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr style="background-color:lightslategrey">
+                <td>Isabella</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+</body>
+</html>
+
+PHONE NUMBER css
+
+
+
+table{
+    font-family: 'Times New Roman', Times, serif;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: center;
+    border: 1.5px solid black;
+    padding: 8px;
+}
+
+td{
+    text-align: center;
+    border: 1.5px solid black;
+    padding: 8px;
+}
+
+tr:nth-child(even)
+{
+    background-color:white;
+}
+
+tr:nth-child(odd)
+{
+    background-color: white;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+
+5)AUTHOR HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors and Books</title>
+    <link href="2b.css" rel="stylesheet">
+
+    <style>
+        th{
+            background-color:orange;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Author Name</th>
+            <th>Books Written</th>
+        </tr>
+
+        <div class="odd">
+            <tr style="background-color: grey;">
+                <td rowspan="2">Bill Gates</td>
+                <td>The road Ahead</td>
+            </tr>
+
+            <tr style="background-color: grey;">
+                <td>How to Prevent Next Pandemic</td>
+            </tr>
+        </div>
+
+
+        <div class="even">
+            <tr>
+                <td rowspan="2">Stephen Hawking</td>
+                <td> A Brief History Of Time</td>
+            </tr>
+
+            <tr>
+                <td>On The Shoulders Of Giant</td>
+            </tr>
+        </div>
+
+
+        <div class="odd">
+            <tr style="background-color: grey;">
+                <td rowspan="2">Peter Drucker</td>
+                <td>Concept Of The Corporation</td>
+            </tr>
+
+            <tr style="background-color: grey;">
+                <td>Landmarks Of Tommorow</td>
+            </tr>
+        </div>
+
+
+        <div class="even">
+            <tr>
+                <td rowspan="3">Dan Brown</td>
+                <td>Da Vinci Code</td>
+            </tr>
+
+            <tr>
+                <td>Digital Fortress</td>
+            </tr>
+
+            <tr>
+                <td>Angels And Demons</td>
+            </tr>
+        </div>
+        
+        
+    </table>
+    
+</body>
+</html>
+
+
+AUTHOR css
+
+
+
+table{
+    font-family: 'Times New Roman', Times, serif;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: center;
+    border: 1.5px solid black;
+    padding: 8px;
+}
+
+td{
+    text-align: center;
+    border: 1.5px solid black;
+    padding: 8px;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+  }
+.even{
+    background-color: blueviolet;
+}
+.odd{
+    background-color: aqua;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+6)RECRUITMENT HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3</title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+
+    <form action="http://localhost/lab3.php" method="post" enctype="multipart/form-data">
+
+        <div>
+            <label>Name:</label>
+            <input type="text" id="username" name="user">fullname
+        </div>
+        <br>
+
+        <div>
+            <label>Year Of Graduation:</label>
+            <input type="text" id="year" name="gradyear">gradyear
+        </div>
+        <br>
+
+        <div>
+            <label>Mobile Phone No.</label>
+            <input type="number" id="number" name="mblno">phonenum
+        </div>
+        <br>
+
+        <div>
+            <label>Aggregate Percentage:</label>
+            <input type="number" id="percentage" name="per">aggregatepercent
+        </div>
+        <br>
+
+        <div>
+            <label>Curiculum Vitae:</label>
+            <input type="file" id="resume" name="cvdoc">cvdocs
+        </div>
+        <br>
+
+       <div class="button">
+        <button type="submit">Submit Your Response</button>
+        <button type="reset">Clear form</button>
+       </div>
+       <br>
+</form>
+    
+</body>
+</html>
+
+RECRUITMENT css
+
+
+
+form{
+    border: 1px solid black;
+    border-radius: 0.5px;
+    margin-left: 500px;
+    margin-right: 550px;
+    padding: 1em;
+    background-color: bisque;
+    margin-top: 150px;
+}
+
+label{
+    text-align:right;
+    display: inline-block;
+   }
+body{
+    background-color: grey;
+}
+
+
+RECRUITMENT php
+
+
+<?php
+// Database connection details
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "Recruitment";
+// Connect to the database
+$conn = mysqli_connect($host, $username, $password, $database);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+// Get the form data
+$name = $_POST['name'];
+$graduation_year = $_POST['graduation_year'];
+$phone_number = $_POST['phone_number'];
+$percentage = $_POST['percentage'];
+// Check if the applicant meets the prerequisites
+$year_difference = date("Y") - $graduation_year;
+if ($year_difference > 5 || $percentage < 60) {
+    echo "Dear $name, you do not meet the prerequisites. Hence your application cannot be accepted!";
+    exit;
+}
+// Save the uploaded file to the server
+$target_dir = "userResumes/";
+$target_file = $target_dir . basename($_FILES["resume"]["name"]);
+if (move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)) {
+    $doc = basename($_FILES["resume"]["name"]);
+} else {
+    echo "Sorry, there was an error uploading your file.";
+    exit;
+}
+// Save the form data to the database
+$sql = "INSERT INTO Applicant (Name, GraduationYear, PhoneNumber, Percentage, Doc) VALUES ('$name', $graduation_year, '$phone_number', $percentage, '$doc')";
+if (mysqli_query($conn, $sql)) {
+    echo "Dear $name, your details are successfully saved and your resume titled $doc is with us.";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
+?>
+
+
+7)CIE COMPUTATION HTML
+
+
+
+<html>
+    <head>
+        <title>CIE Calculator</title>
+        <link href="lab4q1css.css" rel="stylesheet">
+        <script src="lab4q1js.js" ></script>
+    </head>
+   
+<body>
+	<h1> CIE COMPUTATION </h1>
+	<form method="POST" action="http://localhost/lab4q1.php" >
+		<div>
+			<label>Subject:</label>
+			<SELECT name="subject" id="subject">
+				<option VALUE="0">--Select a Subject--</option>
+				<option VALUE="18UISC600">AIML</option>
+				<option VALUE="18UISC601">IOT</option>
+				<option VALUE="18UISC602">UID</option>
+				<option VALUE="18UISC603">AGILE</option>
+			</select>
+	</div>
+    <br>
+
+	
+	<div>
+		<label>USN:</label>
+		<input type="text" id ="usn" name="usn" required>
+	</div>
+    <br>
+
+	<div>
+		<label>IA-I MARKS:</label>
+		<input type="NUMBER" id ="ia1" name="ia1" required>
+	</div>
+    <br>
+
+	<div>
+		<label>IA-II MARKS:</label>
+		<input type="NUMBER" id ="ia2" name="ia2" required>
+	</div>
+    <br>
+
+	<div>
+		<label>IA-III MARKS:</label>
+		<input type="NUMBER" id ="ia3" name="ia3" required>
+	</div>
+    <br>
+
+	<div>
+		<label>CTA Score:</label>
+		<input type="NUMBER" id ="cta" name="cta" required>
+	</div>
+    <br>
+
+	<div>
+		<label>CIE Score:</label>
+		<input type="NUMBER" id ="cie" name="cie" onfocus="calcCIE()" readonly>
+	</div>
+    <br>
+
+	 <div class="button">
+            <button type="submit" onclick="ValidateForm()">Save The Marks</button>
+            <button type="reset">Reset</button>
+        </div>
+        <br>
+
+
+	</form>
+</body>
+</html>
+
+CIE COMPUTATION PHP
+
+
+
+<?php
+	$con=mysqli_connect("localhost","root","");
+	if(mysqli_connect_errno()){
+		print("Failed to connect to DB:".mysqli_connect_error()."<br>"."<br>");
+		exit(0);
+	}
+	else
+		print("Connection successful:"."<br>"."<br>");
+	mysqli_select_db($con,"cie");
+	$usn=$_POST['usn'];
+	$coursecode=$_POST['subject'];
+	$ia1=$_POST['ia1'];
+	$ia2=$_POST['ia2'];
+	$ia3=$_POST['ia3'];
+	$cta=$_POST['cta'];
+	$cie=$_POST['cie'];
+	if($cie>=45 && $cie<=50)
+		$grade='S';
+	else if($cie>=40 && $cie<=44)
+		$grade='A';
+	else if($cie>=35 && $cie<=39)
+		$grade='B';
+	else if($cie>=30 && $cie<=34)
+		$grade='C';
+	else if($cie>=25 && $cie<=29)
+		$grade='D';
+	else if($cie>=20 && $cie<=24)
+		$grade='E';
+	else if($cie>=0 && $cie<=19)
+		$grade='F';
+	else{
+		echo "Invalid marks!! Re-enter the marks"."<br>";
+		exit(0);
+	}
+	$sql1="INSERT INTO iascore VALUES('$usn','$coursecode','$ia1','$ia2','$ia3','$cta','$cie','$grade')";
+	mysqli_query($con,$sql1);
+	echo"Values are inserted into iascore table"."<br>";
+	if($grade=='F'){
+		$sql2="INSERT INTO detainedlist VALUES('$usn','$coursecode','$cie')";
+		mysqli_query($con,$sql2);
+	echo"Values are also inserted into detained list as grade is 'F'";
+	
+	}
+?>
+
+CIE COMPUTATION css
+
+
+
+form{
+    width:500px;
+    margin:auto;
+    border:1px solid black;
+    border-radius: 0.5em;
+    padding:1em;
+    background-color: azure;
+    margin-top: 50px;
+}
+
+label{
+    width:200px;
+    text-align:left;
+    display:inline-block
+}
+
+.button{
+    margin-left: 200px;
+}
+body{
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
+CIE COMPUTATION js
+
+
+
+function ValidateForm()
+{
+		var val=document.getElementById('subject').value;
+		if(val=='0'){
+			alert("enter valid subject code");
+		}		
+		var usn=document.getElementById('usn').value;
+		if(!(usn.substring(0,2)=="2SD")){
+			alert("USN should begin with 2SD");
+		}
+}
+
+function calcCIE()
+{
+	var ia1=document.getElementById('ia1').value;
+	var ia2=document.getElementById('ia2').value;
+	var ia3=document.getElementById('ia3').value;
+	var cta=document.getElementById('cta').value;
+	var ia1=parseInt(ia1);
+	var ia2=parseInt(ia2);
+	var ia3=parseInt(ia3);
+	var cta=parseInt(cta);
+	var res;
+	
+	if(ia1<=ia2 && ia1<=ia3)
+		res=ia3+ia2;
+	if(ia2<=ia1 && ia2<=ia3)	
+		res=ia1+ia3;
+	if(ia3<=ia1 && ia3<=ia2)
+		res=ia1+ia2;
+	res=res+cta;
+	document.getElementById('cie').value=res;
+}
+
+
+8)BOOK HTML
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Book Availability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <center>
+    <form action="check_availability.php" method="post">
+        <h2>Check Book Availability</h2>
+        <label for="book_title">Enter Book Title:</label>
+        <input type="text" id="book_title" name="book_title"><br><br>
+        <input type="submit" value="Check Availability">
+        <input type="reset" value="Reset">
+    </form>
+    </center>
+</body>
+</html>
+
+BOOK CSS
+
+
+body{
+    font-family: Product Sans;
+    background-image: url(img.jpg);
+}
+
+
+form{
+    border-radius: 5%;
+    padding: 2%;
+    border: #e7a821;
+    background-color: #ffffff;
+    border-style: outset;
+    border-width:0.5cm;
+    margin: 30px;
+    font-weight: 100;
+    width: 25%;
+/#609795/
+}
+h2{
+   background-color:#e7a821b0;
+   border-radius: 2%;
+   padding: 5%;
+   color:white;
+   width: 70%;
+}
+input[type="text"]{
+    margin-top: 10px;
+    padding: 5px;
+    border-color: #e7a821;
+    border-radius: 5px;
+    cursor: pointer;
+}
+       
+input[type="submit"],
+input[type="reset"]{
+        font-family: Product Sans;
+        margin-top: 15px;
+        padding: 5px;
+        background-color: #609795;
+        color: white;
+        width: 35%;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+}
+
+
+input[type="submit"]:hover{
+    background-color: rgb(123, 187, 97);
+}
+input[type="reset"]:hover{
+    background-color: rgb(207, 107, 107);
+}
+
+
+BOOK PHP
+
+
+
+<?php
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Library";
+
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+// Check if the form has been submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+    // Get the book title from the form
+    $book_title = $_POST["book_title"];
+
+
+    // Search for the book in the BookDetails table
+    $sql = "SELECT * FROM BookDetails WHERE book_title='$book_title'";
+    $result = mysqli_query($conn, $sql);
+
+
+    // If the book is available, display its details
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        echo "<h2>Book Details</h2>";
+        echo "<table>";
+        echo "<tr><td>Book ID:</td><td>" . $row["book_id"] . "</td></tr>";
+        echo "<tr><td>Book Title:</td><td>" . $row["book_title"] . "</td></tr>";
+        echo "<tr><td>Author:</td><td>" . $row["author"] . "</td></tr>";
+        echo "<tr><td>No. of Copies:</td><td>" . $row["no_of_copies"] . "</td></tr>";
+        echo "</table>";
+    }
+    // If the book is not available, insert a row in the BookRequisition table
+    else {
+        // Check if the book is already requested
+        $sql = "SELECT * FROM BookRequisition WHERE book_title='$book_title'";
+        $result = mysqli_query($conn, $sql);
+
+
+        // If the book is already requested, display a message
+        if (mysqli_num_rows($result) > 0) {
+     echo "<h2>Book Requested</h2>";
+     echo "<p>This book has already been requested. Please check back later.</p>";
+       }
+ // If the book has not been requested, insert a row in the BookRequisition table
+        else {
+            $sql = "INSERT INTO BookRequisition (book_title, author) VALUES ('$book_title', '')";
+            if (mysqli_query($conn, $sql)) {
+                echo "<h2>Book Requested</h2>";
+                echo "<p>Your request for this book has been submitted. We will notify you when the book becomes available.</p>";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        }
+    }
+}
+// Close the database connection
+mysqli_close($conn);
+?>
+
+
+
+9)ADMISSION FORM HTML
+
+
+
+<html>
+ <head>
+  <title>Admission form</title>
+  <link href="admit.css" rel="stylesheet">
+   <script>
+    // JavaScript function to validate the form
+    function validateForm() {
+      // Retrieve form field values
+
+      var name = document.getElementById("name").value;
+      var aadhar = document.getElementById("no").value;
+      var dob = document.getElementById("dob").value;
+      var year = document.getElementById("year").value;
+      var programme = document.getElementById("programme").value;
+
+      // Perform validation
+      if ( name === "" || aadhar === "" || dob === "" || year=== "" || programme === "") {
+        alert("All fields are required!");
+        return false;
+      }
+
+      // Additional validation can be added here as per requirements
+
+      // If all validations pass, return true to submit the form
+      return true;
+    }
+  </script>
+ </head>
+ <body>
+  <h2>Admission Form</h2>
+  <form method="post" action="http://localhost/admit.php"onsubmit="return validateForm()">
+  <div>
+   <label>Applicant Name:</label>
+   <input type="text" id="name" name="name"><br><br>
+  </div>
+ <div>
+   <label>Year of Admission</label>
+   <input type="text" id="year" name="year"><br><br>
+  </div>
+  <div>
+   <label>AADHAR Number</label>
+   <input type="number" id="no" name="no"><br><br>
+  </div>
+   <div class="button">
+   <button type="submit">Save the details</button>
+  </form>
+ </body>
+</html>
+
+
+ADMISSION FORM php
+
+
+<?php
+ $con=mysqli_connect("localhost","root","");
+ if(mysqli_connect_error()){
+  print("Failed to connect to DB".mysqli_connect_error()."<br>"."<br>");
+  exit();
+ }
+ else{
+  print("Connection successful <br>");
+  mysqli_select_db($con,"wtlab6");
+  $name=$_POST['name'];
+  $dob=$_POST['dob'];
+  $programme=$_POST['programme'];
+  $year=$_POST['year'];
+  $no=$_POST['no'];
+  $yr=substr($year,2,2);
+  $course=' ';
+  $uid=' ';
+  if ($programme == 1){
+        $course='BE';
+        $sql2="SELECT count(programme) FROM student_details WHERE programme=1";
+        $res=mysqli_query($con,$sql2);
+        $row=mysqli_fetch_array($res);
+        $admcount=$row[0];
+        $seq=$admcount+1;
+  }
+   if ($programme == 2){
+        $course='MT';
+        $sql3="SELECT count(programme) FROM student_details WHERE programme=2";
+        $res=mysqli_query($con,$sql3);
+        $row=mysqli_fetch_array($res);
+        $admcount=$row[0];
+        $seq=$admcount+1;
+  }
+   if ($programme == 3){
+        $course='MB';
+    $sql4="SELECT count(programme) FROM student_details WHERE programme=3";
+        $res=mysqli_query($con,$sql4);
+        $row=mysqli_fetch_array($res);
+        $admcount=$row[0];
+        $seq=$admcount+1;
+  }
+  if($seq <=9){
+        $uid=$yr.$course.'000'.$seq;
+  }
+  if($seq >=10 && $seq <=99){
+        $uid=$yr.$course.'00'.$seq;
+  }
+  $sql="INSERT INTO student_details VALUES('$name', '$uid','$dob','$programme','$year','$no')";
+  mysqli_query($con,$sql);
+  echo"Values inserted into Student_Details table <br>";
+  echo"UID generated for above details is : <br>".$uid;
+ }
+?>
+
+ADMISSION FORM css
+
+
+form{
+ width:500px;
+ margin:auto;
+ border-radius:0.5em;
+ padding:2em;
+ border:1px solid black;
+}
+h2{
+ text-align:center;
+}
+label{
+ width:150px;
+ text-align:right;
+ display:inline-block;
+}
+.button{
+ margin-left:150px;
+}
+
+
+10)SIGNUP FORM HTML
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+<script>
+   
+</script>  
+</head>
+<body>
+  <center>
+    <form action="signup.php" method="post">
+        <h1>Sign Up form</h1>
+    <label for="user_id">User ID:</label>
+    <input type="text" id="user_id" name="user_id" required><br><br>
+    <label for="ph_num">Mobile Phone Number:</label>
+    <input type="text" id="ph_num" name="ph_num" required><br><br>
+    <label for="user_password">Password:</label>
+    <input type="password" id="user_password" name="user_password" required><br><br>
+    <input type="submit" value="Sign Up">
+    </form>
+  </center>
+</body>
+</html>
+
+
+
+SIGN UP PHP
+
+
+
+<?php
+// Establish a connection to the database
+$conn = mysqli_connect("localhost", "username", "password", "wtlab5");
+
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+
+// Retrieve user input from the sign-up form
+$user_id = $_POST['user_id'];
+$ph_num = $_POST['ph_num'];
+$user_password = $_POST['user_password'];
+
+
+// Encrypt the password
+$user_password = password_hash($user_password, PASSWORD_DEFAULT);
+
+
+// Insert the user details into the database
+$sql = "INSERT INTO User_Account (user_id, user_password, ph_num) VALUES ('$user_id', '$user_password', '$ph_num')";
+if (mysqli_query($conn, $sql)) {
+    echo "Account created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
+
+SIGN UP CSS
+
+
+
+body{
+    font-family: Product Sans;
+    background-image: url(img.jpg);
+}
+
+
+form{
+    border-radius: 5%;
+    padding: 2%;
+    border: #e7a821;
+    background-color: #ffffff;
+    border-style: outset;
+    border-width:0.5cm;
+    margin: 5px;
+    font-weight: 100;
+    width: 25%;
+/#609795/
+}
+h2{
+   background-color:#e7a821b0;
+   border-radius: 2%;
+   padding: 5%;
+   color:white;
+   width: 40%;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"]{
+    margin-top: 10px;
+    padding: 5px;
+    border-color: #e7a821;
+    border-radius: 5px;
+    cursor: pointer;
+}
+       
+input[type="submit"],
+input[type="reset"]{
+        margin-top: 10px;
+        padding: 5px;
+        background-color: #609795;
+        color: white;
+        width: 31%;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+
+
+}
+input[type="file"]{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #e7a821;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover{
+    background-color: rgb(123, 187, 97);
+}
+input[type="reset"]:hover{
+    background-color: rgb(207, 107, 107);
+}
+
+
+input[type=email]:focus{
+    background-color: lightblue;
+  }
+
+
+input[type=text]:focus{
+      background-color: lightblue;
+}
+input[type=number]:focus{
+    background-color: lightblue;
+  }    
+  input[type=tel]:focus{
+    background-color: lightblue;
+  }
+
+
+
+11)LOGIN FORM HTML
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="login.php" method="post">
+    <label for="user_id">User ID:</label>
+    <input type="text" id="user_id" name="user_id" required><br><br>
+    <label for="user_password">Password:</label>
+    <input type="password" id="user_password" name="user_password" required><br><br>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
+
+
+
+LOGIN FORM PHP
+
+
+
+<?php
+// Establish a connection to the database
+$conn = mysqli_connect("localhost", "username", "password", "wtlab5");
+
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+
+// Retrieve user input from the login form
+$user_id = $_POST['user_id'];
+$user_password = $_POST['user_password'];
+
+
+// Check if the user-id exists in the database
+$sql = "SELECT * FROM User_Account WHERE user_id = '$user_id'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // User-id exists, you can verify the password here and perform further actions
+    // For example, you can use the password_verify function to check if the input password matches the hashed password in the database
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($user_password, $row['user_password'])) {
+        echo "Login successful!"; // Display a success message
+    } else {
+        echo "Incorrect password"; // Display an error message
+    }
+} else {
+    // User-id does not exist, display a message with a link to the sign-up form
+    echo "The user ID '$user_id' does not exist! <br>";
+    echo "Click <a href='signup_form.php'>here</a> to sign up.";
+}
+
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
+LOGIN CSS same as sign up form
+
+
+
